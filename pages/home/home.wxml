@@ -1,3 +1,5 @@
 <!--pages/home/home.wxml-->
 <text class='title'>Hello word</text>
 <button size='mini'>anniu</button>
+
+<view>2.知识点2</view>
