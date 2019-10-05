@@ -1,0 +1,3 @@
+<!--pages/home/home.wxml-->
+<text class='title'>Hello word</text>
+<button size='mini'>anniu</button>
