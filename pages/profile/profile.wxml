@@ -1,0 +1,12 @@
+<!--pages/profile/profile.wxml-->
+<view>我是用户界面</view>
+<view>Hello <open-data type="userNickName"></open-data></view>
+<view wx:for="{{list}}" wx:key="{{item.id}}" class='list'>
+<view class='title'>{{item.title}}</view>
+<view class='stitle'>
+<view class='addTime'>{{item.add_time}}</view>
+<view class='click'>{{item.click}}</view>
+</view> 
+<view class='zhaiyao'>{{item.zhaiyao}}</view>
+<image src='{{item.img_url}}'></image>
+</view>
