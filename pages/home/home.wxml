@@ -1,3 +1,36 @@
 <!--pages/home/home.wxml-->
-<text class='title'>Hello word</text>
-<button size='mini'>anniu</button>
+
+<!-- 1.小程序的数据绑定  {{}}Musrache-->
+<view>Hello {{name}}</view>
+<view>年龄:{{age}}</view>
+
+<!-- 2.列表展示 wx:for-->
+<view wx:for="{{skill}}">{{item.id}}--{{item.kname}}--{{item.cd}}</view>
+
+<!-- 3.事件监听 bindtap-->
+<view>当前计数：{{count}}</view>
+<button size='mini' bindtap='handleBtnClick'>+</button>
+<button size='mini' bindtap='handleBtnClick2'>-</button>
+
+
+<!-- 
+编程范式
+1.命令式编程
+2.声明式编程 -->
+
+
+<!-- 微信小程序的双线程模式  渲染层和逻辑层 -->
+<!-- 数据驱动原理，diff算法对比前后两个js对象，将差异引用到原来的dom树上 -->
+
+
+<!-- 注册app -->
+<!-- 1.判断小程序进入场景 -->
+<!-- 2.监听生命周期函数，再生命周期函数中执行对应的业务逻辑，比如获取用户信息 -->
+<!-- 3.APP实例只有一个，并且全局共享（单例对象），可以存放公共数据 -->
+
+<!-- 注册page -->
+<!--
+ 1.在生命周期函数中发送网络请求，在服务器获取数据（wx.request）
+2.初始化一些数据，data:{}
+3.监听页面中的事件
+4.监听其他事件（上拉刷新，页面滚动，下拉加载更多等） -->

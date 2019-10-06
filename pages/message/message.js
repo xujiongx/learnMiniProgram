@@ -1,4 +1,7 @@
-// pages/about/about.js
+// pages/message/message.js
+const app = getApp()
+const name = app.globalData.name
+
 Page({
 
   /**
@@ -6,6 +9,9 @@ Page({
    */
   data: {
 
+  },
+  handleGetUserInfo(even){
+    console.log(even)
   },
 
   /**
