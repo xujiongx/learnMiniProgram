@@ -1,0 +1,59 @@
+<!--pages/wxml/wxml.wxml-->
+<!-- 1.wxml基本格式 -->
+<!-- 
+类似html
+严格的闭合
+大小写敏感
+ -->
+ <view>wxml</view>
+ <view class='girlImgs'>
+ <image src='http://img.pconline.com.cn/images/upload/upc/tx/itbbs/1404/23/c8/33464960_1398222342996_mthumb.jpg' class='girl'/>
+  <image src='https://cn.bing.com/th?id=OIP.b0x_qc4Kc9ks7iCHqKp2KQHaNK&pid=Api&rs=1' class='girl'/>
+ </view>
+
+
+ <!-- 2.Mustache语法  加法 三目运算符 更新时间 添加类-->
+ <view>{{message}}</view>
+ <view>{{nowtime}}</view>
+
+ <!-- <map longitude='116.11' latitude='39.6' class='map'></map> -->
+
+
+ <!-- 3.条件判断 -->
+ <!-- 
+ wx:if
+ wx:else
+ wx:elif
+  -->
+
+  <!-- hidden -->
+  <view hidden>我是hidden属性</view>
+
+
+  <!-- 4.wx:for -->
+  <!-- 
+  {{index}} {{item}}
+  v-for-item可以改变儿子的名字
+  wx:key是为了更高效更新虚拟dom
+   -->
+
+
+
+<!-- 5.block，与view相比不是一个组件，只是一个标签 ，减少渲染性能   只接受控制属性-->
+  <block></block>
+
+
+<!-- 模板  没有使用前不会被渲染    name声明，is使用 data传入数据 -->
+<!-- <template name="content">
+  <button size='mini'>{{btnText}}</button>
+  <text>{{content}}</text>
+</template> -->
+
+<import src="/wxml/template.wxml" />
+<!-- <include src="/wxml/template.wxml" /> -->
+
+
+<template is="content" data="{{btnText:'按钮',content:'嘿嘿'}}" />
+
+<!-- wxml的引入  import(不能循环导入)和include(不能导入template,wxs) -->
+

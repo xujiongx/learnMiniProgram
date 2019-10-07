@@ -1,0 +1,58 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- wxs  weixin Script-->
+
+<!--why
+ wxml中不能直接调用page和conponent中定义的函数 
+希望可以在wxml中处理数据
+ -->
+
+ <!-- 限制和优点
+ wxs运行环境与js隔离，不能调用js里面的函数，也不能调用小程序的API
+ wxs不能作为组件的回调函数
+ 在iOS里面wxs比js块2-20倍
+  -->
+
+<!-- 定义
+module必须
+不支持es6语法
+CommonJS语法导出
+-->
+<!-- 引用
+不能使用绝对位置
+module必须
+ -->
+
+
+
+
+<!-- <wxs module="info">
+  var msg='hello word';
+  var sum=function(a,b){
+  return a+b;
+  }
+
+  module.exports={
+  msg:msg,
+  sum:sum
+  }
+</wxs> -->
+
+<!-- 引用 -->
+<wxs src='../../wxs/info.wxs' module="info" />
+
+<view>{{info.msg}}</view>
+<view>{{info.sum(1,2)}}</view>
+
+
+
+
+
+<!-- wxs的应用 -->
+
+<!--小数位数-->
+<wxs src='../../wxs/format.wxs' module="format" />
+ <view>{{format.priceFormate(price,2)}}</view>
+
+ <!-- 时间格式化 -->
+ <wxs src='../../wxs/format.wxs' module="format" />
+ <view>{{format.dateFormate(time,'yyyy-mm--dd:hh:mm:ss')}}</view>
