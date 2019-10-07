@@ -1,0 +1,62 @@
+<!--pages/text/text.wxml-->
+<!-- 1.text属性 -->
+<text space='ensp'>Hello word\n</text>
+<text selectable='{{true}}'>你好，小程序\n</text>
+<text decode>5 &gt; 3</text>
+<!-- 
+text属性：
+selectable(能否被选中) 
+space(空格大小)：ensp(中文字符空格一半) emsp(中文空格大小) nbsp(根据字体)
+decode(是否解码)
+-->
+
+
+<!-- 2.button属性 -->
+<button>按钮</button>
+<button size='mini'>mini</button>
+<button size='mini' type='primary'>mini</button>
+<button size='mini' type='default' plain>mini</button>
+<button size='mini' type='warn' loading>mini</button>
+<button hover-class='press'>hover</button>
+<!-- 
+属性
+size:mini 
+type:primary warn
+plain(镂空)
+display
+loading
+ -->
+
+
+ <!-- 3.view组件 -->
+ <view class='box'>视图</view>
+ <view>视图2</view>
+ <!-- 
+ 属性
+ hover-class
+ hover-start-time
+ hover-stay-time
+ hover-stop-propagation
+  -->
+
+  <!-- 4.image组件 -->
+  <image src='../../assets/tabbar/home.png'></image>
+  <image src='/assets/tabbar/home.png'></image>
+
+  <button bindtap='handleChooseAlbum'>选择图片</button>
+  <image src='{{img_path}}' show-menu-by-longpress></image>
+
+  <image wx:for="{{10}}" wx:key="{{10}}"
+  src='http://www.sharefie.net/uploads/2017/01/51/51_4_586cb15f2fbb2.jpg'
+  bindload='handleImageLoad'
+  lazy-load='{{true}}'
+  ></image>
+
+  <!-- 
+  属性
+  lazy-load(懒加载,上下三屏)
+  bindload(图片加载完成)
+  show-menu-by-longpress(长按识别)
+  mode:aspecFit widthFix
+   -->
+

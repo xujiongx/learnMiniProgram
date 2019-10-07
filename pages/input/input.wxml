@@ -1,0 +1,67 @@
+<!--pages/input/input.wxml-->
+<!-- 5.input组件 -->
+<input value='text'></input>
+
+<input type='number'></input>
+
+<input password></input>
+
+<input focus placeholder='黎明'></input>
+
+<input bindinput='handleInput'
+        bindfocus='handleFocus'
+        bindblur='handleBlur'
+
+></input>
+<view>{{number}}</view>
+<!-- 
+input属性
+value(默认值)
+type(弹出键盘类型  英文中文):text number idcard digit
+password(暗文)
+placeholder(占位文字)
+placeholder-style
+placeholder-class
+display
+maxlength
+confirm-type(键盘右下角文字)
+
+input绑定事件
+bindinput
+bindfocus
+bindblur
+bindconfirm
+ -->
+
+
+
+<!-- 6.scroll-view   局部滚动  水平和垂直-->
+<scroll-view class='container'
+              scroll-x 
+              bindscroll='handleScroll'>
+  <view wx:for="{{10}}" wx:key="{{10}}" class='item'>{{item}}</view>
+</scroll-view>
+
+<!-- 
+属性
+scroll-x(横向滚动)
+scroll-y
+upper-threshold（距离顶部多高事触发的事件）
+lower-threshold
+scroll-top（滚动条在顶部）
+bindscroll
+bindscrollupper
+bindscrolltolower
+ -->
+
+
+
+<!-- 
+公共属性
+id
+class
+style
+hidden
+data-*
+bind*/catch*
+ -->

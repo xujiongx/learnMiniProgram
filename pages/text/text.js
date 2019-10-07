@@ -1,17 +1,28 @@
-// pages/message/message.js
-const app = getApp()
-const name = app.globalData.name
-
+// pages/text/text.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    img_path:'',
+  },
+
+  handleChooseAlbum(){
+    //系统api，然用户选择图片（或者拍照）
+    wx.chooseImage({
+      success: (res)=> {
+        console.log(res)
+        const path=res.tempFilePaths[0]
+        this.setData({
+          img_path:path
+        })
+      },
+    })
 
   },
-  handleGetUserInfo(even){
-    console.log(even)
+  handleImageLoad(){
+    console.log('图片加载完成')
   },
 
   /**

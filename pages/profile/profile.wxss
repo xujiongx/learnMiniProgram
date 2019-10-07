@@ -1,8 +1,0 @@
-/* pages/profile/profile.wxss */
-.stitle{
-  display: flex;
-  justify-content: space-between;
-}
-.list{
-  text-align: center;
-}

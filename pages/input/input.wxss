@@ -1,0 +1,17 @@
+/* pages/input/input.wxss */
+input{
+  border: 1px solid red;
+  margin: 10px 0;
+}
+
+.container{
+  background: pink;
+  white-space: nowrap;
+}
+.item{
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  margin: 10px;
+  display: inline-block;
+}

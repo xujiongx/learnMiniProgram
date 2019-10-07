@@ -1,33 +1,43 @@
-// pages/profile/profile.js
+// pages/input/input.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list:[]
+      number:'',
+  },
+  handleInput(even){
+    const data =even.detail.value;
+    this.setData({
+      number:data
+    })
+    console.log(even)
+  },
+  handleFocus(){
+    console.log(1)
+  },
+  handleBlur(){
+    console.log(0)
+
+  },
+  handleScroll(even){
+    console.log(even)
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'http://www.liulongbin.top:3005/api/getnewslist',
-      success:(res)=>{
-        console.log(res.data.message)
-        const data = res.data.message;
-        this.setData({
-          list:data,
-        })
-      },
-    })
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+
   },
 
   /**
@@ -51,11 +61,6 @@ Page({
 
   },
 
-
-
-
-
-// 其他事件
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
@@ -75,9 +80,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  //监听页面滚动事件
-  onPageScroll(obj){
-    console.log(obj)
   }
 })

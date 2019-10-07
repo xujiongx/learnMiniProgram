@@ -1,0 +1,8 @@
+/* pages/text/text.wxss */
+.press{
+  background: red;
+  color: white;
+}
+.box{
+  background: yellow;
+}
