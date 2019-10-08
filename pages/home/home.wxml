@@ -1,3 +1,58 @@
 <!--pages/home/home.wxml-->
-<text class='title'>Hello word</text>
-<button size='mini'>anniu</button>
+<!-- 1，事件处理 -->
+<button bindtap='handleClick'>top</button>
+<button bind:tap='handleClick'>top</button>
+<button catch:tap='handleClick'>top</button>
+
+<!-- 1，常见事件类型 
+touchstart 开始触摸
+touchmove 触摸后移动
+touchcancle 触摸失被打断
+tap       触摸后马上离开
+longpress 超过350秒后
+longtap 不推荐使用
+-->
+<view class='box'
+      bind:touchstart="handleTouchStart"
+      bind:touchmove="handelTouchMove"
+></view>
+
+
+<!-- 3，事件对象
+type  事件类型
+timeStamp 页面打开到触发的毫秒数
+target 触发事件组件的集合
+currenTarget 当前组件的事件集合
+detail 额外的信息
+touches 触摸事件，停留在屏幕中的触摸点信息的数组
+changeTouches 触摸事件，变化的触摸点的信息的数组
+
+currentTargen和target的区别：多指触摸是不同，touchend时不同，事件冒泡时不同
+ -->
+<button id='btn' size='mini' bindtap='handEvenClick'>事件对象</button>
+
+
+<!-- 4.事件的传递参数
+data-item='{{item}}'
+ -->
+ <view class='title' >
+ <block wx:for='{{title}}' wx:key='{{index}}'>
+ <view class='titleItem' 
+ bindtap='handleItemClick'
+ data-index='{{index}}'
+ data-item='{{item}}'
+ >{{item}}</view>
+ </block>
+ </view>
+
+
+
+ <!-- 5.事件捕获和事件冒泡事件 -->
+<view class='v1'>
+  <view class='v2'>
+    <view class='v3'>
+    
+    </view>
+  </view>
+</view>
+

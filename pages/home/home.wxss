@@ -1,4 +1,17 @@
 /* pages/home/home.wxss */
 .title{
   color: red;
+  display: flex;
 }
+.titleItem{
+  flex: 1;
+  text-align: center;
+}
+
+
+.box{
+  width: 100rpx;
+  height: 100rpx;
+  background: red;
+}
+
