@@ -1,0 +1,10 @@
+<!--pages/login/login.wxml-->
+<text>pages/login/login.wxml</text>
+
+
+<!-- 小程序登陆的前端操作
+1.调用wx.login获取code
+2.第哦啊有wx.request发送code到我们自己的服务器（我们自己服务器会返回一个登陆状态，比如token）
+3.将登陆状态的标识用token进行存储
+4.请求需要登陆状态标识的接口时，调用token
+ -->

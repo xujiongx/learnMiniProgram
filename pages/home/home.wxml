@@ -1,3 +1,30 @@
 <!--pages/home/home.wxml-->
-<text class='title'>Hello word</text>
-<button size='mini'>anniu</button>
+<!-- 系统api -->
+
+<!-- 1.网络请求的封装
+1.降低网络请求和wx.request的耦合度
+2.使用Promise的方法获取回调结果
+ -->
+
+ <!-- 2.展示弹窗 
+ showToast
+ showModal
+ showLoading
+ showActionSheet
+ -->
+ <button size='mini' bind:tap="handleShowToast">showToast</button>
+
+ <button size='mini' bind:tap="handleShowModal">showModal</button>
+
+  <button size='mini' bind:tap="handleShowLoading">showLoading</button>
+
+  <button size='mini' bind:tap="handleShowActionSheet">showActionSheet</button>
+
+
+  <!-- 3.页面分享
+  
+   -->
+   <button size='mini'  open-type='share'>分享</button>
+
+
+   <!-- 4.登录流程 -->
