@@ -1,3 +1,70 @@
 <!--pages/home/home.wxml-->
-<text class='title'>Hello word</text>
-<button size='mini'>anniu</button>
+<!-- 组件化开发 -->
+<my-cpn></my-cpn>
+<!-- <my-cpn></my-cpn> -->
+
+<!-- 1.注意
+组件名称只能是小写字母，中划线，下划线的组合
+自定义组件也可以引用自定义组件
+不能以wx-开头
+可以页面注册，也可以全局注册
+ -->
+
+
+ <!-- 2.自定义组件的样式 
+ 组件内的样式不影响page页面
+ 组件内不能使用id选择器，属性选择器，标签选择器
+
+ 外部class不对组件造成影响
+
+ -->
+<my-style></my-style>
+
+
+
+<!-- 3.页面和组件之间的传值
+数据（properties）properties有类型集和默认值,observer
+样式（externalClasses）
+标签（slot）
+
+自定义事件
+ -->
+ <my-prop title="{{title}}" content="{{content}}" tcolor="tcolor">
+ </my-prop>
+ <my-prop/>
+
+
+ <!-- 子组件传递事件 和数据 this.tiggerEvent("方法名称",{数据},{})-->
+ <view>今天日期：{{today}}</view>
+ <view>当前计数：{{count}}</view>
+ <my-even bind:incount="handleIncrease"></my-even>
+
+
+
+<!-- 自定义组件 -->
+<my-bar title="{{titlelist}}" bind:titleclick="titleClick"></my-bar>
+
+
+<!-- 直接选用组件内的数据/调用方法 -->
+<button size='mini' bind:tap="addbtnClick">加</button>
+<my-sel id="sel"></my-sel>
+
+
+
+<!-- 组件插槽 -->
+<!-- 单个插槽 -->
+<my-slot>
+<slider></slider>
+</my-slot>
+
+<!-- 多个插槽 
+name属性
+Components对象中添加一个选项options->multipleSlots: true
+
+-->
+<my-mslot>
+<text slot="slot1">1111</text>
+<slider slot="slot2"></slider>
+<view slot="slot3">3333</view>
+</my-mslot>
+

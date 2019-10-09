@@ -1,0 +1,4 @@
+<!--components/my-prop/my-prop.wxml-->
+<!-- 传值的传样式 -->
+<view class='title tcolor'>{{title}}</view>
+<view>{{content}}</view>

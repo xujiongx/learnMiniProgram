@@ -1,0 +1,4 @@
+/* components/my-multiple-splt/my-multiple-splt.wxss */
+.red{
+  background: red;
+}

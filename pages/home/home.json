@@ -1,3 +1,13 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "my-cpn":"/components/my-cpn/my-cpn",
+    "my-style": "/components/my-style/my-style",
+    "my-prop": "/components/my-prop/my-prop",
+    "my-even": "/components/my-even/my-even",
+    "my-bar": "/components/my-bar/my-bar",
+    "my-sel": "/components/my-sel/my-sel",
+    "my-slot": "/components/my-slot/my-slot",
+    "my-mslot": "/components/my-multiple-splt/my-multiple-splt"
+    
+  }
 }

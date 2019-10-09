@@ -1,0 +1,4 @@
+<!--components/my-cpn.wxml-->
+<view class='title'>标题</view>
+<textarea class='content'></textarea>
+<!-- <view class='content'>文本</view> -->

@@ -2,3 +2,7 @@
 .title{
   color: red;
 }
+
+.tcolor{
+  color: red;
+}

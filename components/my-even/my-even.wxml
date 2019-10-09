@@ -1,0 +1,2 @@
+<!--components/my-even/my-even.wxml-->
+<button size='mini' bind:tap='handleIncount'>+1</button>

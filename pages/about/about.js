@@ -5,7 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    good:'',
+    titlelist:["hah","wedw","wew"]
+  },
+  titleClick(e){
+    const title=e.detail.title;
+    this.setData({
+      good:title
+    })
+    console.log(e)
   },
 
   /**

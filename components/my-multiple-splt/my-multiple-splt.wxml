@@ -1,0 +1,7 @@
+<!--components/my-multiple-splt/my-multiple-splt.wxml-->
+<view>start</view>
+<slot class="red" name="slot1"/>
+<slot name="slot2" />
+<slot name="slot3"></slot>
+
+<view>end</view>
