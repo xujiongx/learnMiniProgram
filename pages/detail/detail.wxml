@@ -1,0 +1,4 @@
+<!--pages/detail/detail.wxml-->
+<text>pages/detail/detail.wxml</text>
+
+<button size='mini' bind:tap="handleBack">🐂◀</button>

@@ -1,3 +1,22 @@
 <!--pages/home/home.wxml-->
-<text class='title'>Hello word</text>
-<button size='mini'>anniu</button>
+<!-- 页面跳转 -->
+
+<!-- 1.navigator
+url
+open-type：redirect(重定向) switchBar(跳到bar)  reLaunch(关闭所有页面，打开一个页面)  navigateBack  exit
+
+ -->
+<navigator url='/pages/detail/detail' open-type='redirect'>详情</navigator>
+
+<!-- 2.跳转的时候数据之间的传递
+主页面向详情页传值 onLoad
+详情页向主页面传值 getCurrentPages()获取所有活跃界面
+ -->
+<navigator url='/pages/detail/detail?name=tom&age=18' >跳转数据传递</navigator>
+<view>{{title}}</view>
+
+
+<!-- 3.通过代码进行跳转
+wx.navigateTo({url:''})
+ -->
+<button size='mini' bind:tap="handleTodetail">跳转到详情✌</button>
